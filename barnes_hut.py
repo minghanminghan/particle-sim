@@ -441,13 +441,6 @@ def draw_scale_indicators(img: np.ndarray, x_min: float, x_max: float, y_min: fl
 
 def simulate(frames: int):
     """Main simulation loop using pointer-based Barnes-Hut with NumPy"""
-    # Three-body periodic orbit (Figure-8 choreography)
-    # Initial positions: (-1, 0), (1, 0), (0, 0)
-    # Initial velocities: (0.3471168881, 0.5327249454), (0.3471168881, 0.5327249454), (-0.6942337762, -1.0654498908)
-    # Masses: 1, 1, 1
-    # For Verlet: x_prev = x - vx * TIME_DELTA, y_prev = y - vy * TIME_DELTA
-
-    # Particle 1: position (-1, 0), velocity (0.3471168881, 0.5327249454)
     x1, y1 = -1.0, 0.0
     vx1, vy1 = 0.3471168881, 0.5327249454
     x1_prev = x1 - vx1 * TIME_DELTA
